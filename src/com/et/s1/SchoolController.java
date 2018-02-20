@@ -27,6 +27,7 @@ public class SchoolController {
 				break;
 			case 2:
 				System.out.println("성적입력");
+				ss.addPoint(st);
 				break;
 			case 3:
 				System.out.println("성적조회");

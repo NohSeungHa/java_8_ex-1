@@ -10,11 +10,11 @@ public class StudentView {
 		for(int i=0; i<st.length; i++) {
 			System.out.println("학생의 이름: " + st[i].name);
 			System.out.println("학생의 번호: " + st[i].num);
-			System.out.println("학생 국어점수: " + st[i].num);
-			System.out.println("학생 영어점수: " + st[i].num);
-			System.out.println("학생 수학점수: " + st[i].num);
-			System.out.println("학생의 총점: " + st[i].num);
-			System.out.println("학생의 평균: " + st[i].num);
+			System.out.println("학생 국어점수: " + st[i].kor);
+			System.out.println("학생 영어점수: " + st[i].eng);
+			System.out.println("학생 수학점수: " + st[i].math);
+			System.out.println("학생의 총점: " + st[i].total);
+			System.out.println("학생의 평균: " + st[i].avg);
 			
 		}
 	}
