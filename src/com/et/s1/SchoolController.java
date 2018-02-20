@@ -9,9 +9,13 @@ public class SchoolController {
 	//내용은 1.학생등록 2.성적입력 3.성적조회 4.전체조회 5.프로그램종료
 
 	public void start() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);	//스캐너
+		Student s = new Student();				//Student 객체 생
+		Student [] st = null;
 		boolean check = true;	//전체프로그램 순환변수
-		
+		StudentService ss = new StudentService();
+		StudentView sv = new StudentView();
+
 		while(check) {
 			System.out.println("1.학생등록 2.성적입력 3.성적조회 4.전체조회 5.프로그램종료");	//메뉴출력
 			int select = sc.nextInt();
@@ -19,6 +23,7 @@ public class SchoolController {
 			switch (select) {
 			case 1:
 				System.out.println("학생등록");
+				st = ss.addStudent();
 				break;
 			case 2:
 				System.out.println("성적입력");
@@ -28,6 +33,7 @@ public class SchoolController {
 				break;
 			case 4:
 				System.out.println("전체조회");
+				sv.view(st);
 				break;
 			case 5:
 				System.out.println("프로그램을 종료합니다.");
