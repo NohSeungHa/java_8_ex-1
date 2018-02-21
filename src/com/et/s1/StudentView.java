@@ -18,4 +18,20 @@ public class StudentView {
 			
 		}
 	}
+	
+	public void viewStudent(Student st) {
+			
+		if(st == null) {
+			System.out.println("해당번호의 학생이 없습니다.");
+		}
+		else {
+			System.out.println(st.name);
+			System.out.println(st.num);
+			System.out.println(st.kor);
+			System.out.println(st.eng);
+			System.out.println(st.math);
+			System.out.println(st.total);
+			System.out.println(st.avg);
+		}
+	}
 }

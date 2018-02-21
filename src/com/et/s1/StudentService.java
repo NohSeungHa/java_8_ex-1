@@ -52,4 +52,22 @@ public class StudentService {
 			stu[i].avg = stu[i].total/3.0;
 		}
 	}
+	public Student search(Student [] stu) {
+		Scanner sc = new Scanner(System.in);
+		Student student = null;
+				
+		System.out.println("찾을 학생의 번호를 입력하세요.");
+		int n = sc.nextInt();
+		
+		for(int i=0; i<stu.length; i++) {
+			if(n == stu[i].num) {
+				student = stu[i];
+				
+			}
+		}
+		return student;	
+	//search 메서드명
+	//번호를 입력받아서 학생한명을 찾아서
+	//해당학생 출력은 Studentview에서 viewStudent라는 메서드에서 출력  
+	}
 }

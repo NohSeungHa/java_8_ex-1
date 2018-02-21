@@ -12,6 +12,7 @@ public class SchoolController {
 		Scanner sc = new Scanner(System.in);	//스캐너
 		Student s = new Student();				//Student 객체 생
 		Student [] st = null;
+		Student st2 = new Student();
 		boolean check = true;	//전체프로그램 순환변수
 		StudentService ss = new StudentService();
 		StudentView sv = new StudentView();
@@ -31,6 +32,8 @@ public class SchoolController {
 				break;
 			case 3:
 				System.out.println("성적조회");
+				st2 = ss.search(st);
+				sv.viewStudent(st2);
 				break;
 			case 4:
 				System.out.println("전체조회");
